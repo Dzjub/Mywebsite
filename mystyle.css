@@ -1,0 +1,778 @@
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+
+  background-color: #ffffff;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: #ffffffe3;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ffffffb7;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4de;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4de;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 1em;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .1s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: flex;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: all .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+a:link {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  
+}
+
+a:visited {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  
+}
+
+
+a:active {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  
+}
+
+
+#hireme {
+  flex-direction: row;
+ margin-right: 20px;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Raleway";
+  box-sizing: border-box;
+}
+
+.title-about {
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("logo.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-section {
+  background-color: rgb(244, 244, 244);
+  height: 620px;
+}
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  background-color: #ffffffdd;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+
+
+.services {
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+#services-title {
+  text-align: center;
+  margin: 40px;
+}
+
+#logo-design {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.logodesignimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#logodesigntext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#creativedirection {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.creativedirectionimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#creativedirectiontext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#branding {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.brandingimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#brandingtext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+
+#campaigns {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.campaignsimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#campaignstext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#art-direction {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.image {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#text {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#website-design {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.image {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#text {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#website-design {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.websitedesignimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#websitedesigntext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#editorial-design {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.editorialdesignimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#editorialdesigntext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#books-magazines {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.booksmagazinesimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#booksmagazinestext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+
+#packaging-design {
+  margin: 40px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.packagingdesignimage {
+  border-radius: 15px 15px 0px 0px;
+}
+
+#packagingdesigntext {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+
+/* TESTIMONIALS */
+
+ .testimonials {
+  text-align: center;
+    border: 0px solid rgb(0, 0, 0);
+    background-color: rgb(243, 243, 243);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+ #testimonials-title {
+    text-align: center;
+    margin: 40px;
+  }
+ 
+
+  #testimonial-1 {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+   
+  }
+  #testimonial-2 {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+  }
+  #testimonial-3 {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+  }
+
+
+ 
+ .footer {
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: x-small;
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,.1);
+
+ }
+
+#footer1 {
+  width: 50%;
+  padding: 10px;
+
+ }
+
+#footer2 {
+  width: 50%;
+  padding: 10px;
+  }
+
+
+
+  .blogheader {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .subscribebutton {
+    border-width: 1pt;
+    border-color: #222;
+  }
+
+.blogposts {
+  padding: 20px;
+}
+
+#blog-010823 {
+  margin: 20px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.blogimage {
+  border-radius: 15px 15px 0px 0px;
+
+
+}
+
+#blog-text {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+#blog-020823 {
+  margin: 20px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+/* About me cards */
+
+
+#aboutmeimagecard {
+  margin: 20px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+.aboutmeimage {
+  border-radius: 15px 15px 15px 15px;
+
+
+}
+
+
+/* Style the form element with a border around it */
+form {
+  border: 0px solid #ffffff;
+}
+
+/* Add some padding and a grey background color to containers */
+.subscribe {
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgb(255, 255, 255);
+ text-align: center;
+}
+
+
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 30px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+.checkedbox {
+  padding-left: 60px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #3388d7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(157, 157, 157, 0.19);
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+
+
+#portfolio-bks {
+  margin: 20px;
+  border-radius: 15px;
+  text-align: left;
+  background-color: #ffffff;
+  padding-top: 20px;
+  box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.2), 0 2px 4px 0 rgba(157, 157, 157, 0.19);
+}
+
+#portfolio-text {
+  padding-bottom: 20px;
+  margin: 30px;
+}
+
+
+/* FORM-LOGO DESIGN */
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 8px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 15px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #3682ed;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #1f70bc;
+}
+
+/* Add a background color and some padding around the form */
+.logodesignform {
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 20px;
+}
+
+.h2header {
+  text-align: center;
+  
+}
+
+
+
+/* Chose file section */
+
+.chosefile {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.fileselect {
+  border-radius: 15px;
+  box-shadow: 0 2px 4px 0 rgba(196, 196, 196, 0.793);
+  height: 300px;
+  background-color: #ffffff;
+  padding: 10px 30px 40px;
+}
+
+
+
+.drop_box {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px dotted #a3a3a3;
+  border-radius: 8px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #3388d7;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #3a73d6;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+
+
+/* portfolio grid */
+
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.project {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 0px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+	
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 8px 8px;
+    margin-bottom: 0px;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Adjust styles as needed */
+
